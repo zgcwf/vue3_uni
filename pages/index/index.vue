@@ -1,9 +1,19 @@
 <template>
 	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
+		<image class="logo" src="@/static/logo.png"></image>
 		<view class="text-area">
 			<text class="title">{{title}}</text>
 		</view>
+		<scroll-view scroll-y="true" class="scroll-Y" :show-scrollbar="false">
+			<view class="scroll-Y-1">A</view>
+			<view class="scroll-Y-2">B</view>
+			<view class="scroll-Y-3">C</view>
+		</scroll-view>
+		<scroll-view scroll-x="true" class="scroll-X" :show-scrollbar="false">
+			<view class="scroll-X-1">D</view>
+			<view class="scroll-X-2">E</view>
+			<view class="scroll-X-3">F</view>
+		</scroll-view>
 	</view>
 </template>
 
@@ -11,7 +21,7 @@
 	export default {
 		data() {
 			return {
-				title: 'hello, world'
+				title: 'Hello, World'
 			}
 		},
 		// 页面的生命周期
@@ -39,7 +49,7 @@
 	}
 </script>
 
-<style>
+<style lang="scss">
 	.content {
 		display: flex;
 		flex-direction: column;
@@ -64,5 +74,65 @@
 	.title {
 		font-size: 36rpx;
 		color: #8f8f94;
+	}
+
+	.scroll-Y {
+		height: 300px;
+		// 隐藏滚动条(编写全局样式)
+		:global(.scroll-Y .uni-scroll-view::-webkit-scrollbar) {
+			display: none;
+			width: 0;
+			height: 0;
+			color: transparent;
+		}
+
+		.scroll-Y-1 {
+			height: 200px;
+			background-color: red;
+		}
+
+		.scroll-Y-2 {
+			height: 200px;
+			background-color: blue;
+		}
+
+		.scroll-Y-3 {
+			height: 200px;
+			background-color: green;
+		}
+	}
+
+	.scroll-X {
+		height: 300px;
+		width: 750rpx;
+		white-space: nowrap;
+		// 隐藏滚动条
+		::-webkit-scrollbar {
+			display: none;
+			width: 0;
+			height: 0;
+			color: transparent;
+		}
+
+		.scroll-X-1 {
+			display: inline-block;
+			width: 600rpx;
+			height: 200px;
+			background-color: red;
+		}
+
+		.scroll-X-2 {
+			display: inline-block;
+			width: 600rpx;
+			height: 200px;
+			background-color: blue;
+		}
+
+		.scroll-X-3 {
+			display: inline-block;
+			width: 600rpx;
+			height: 200px;
+			background-color: green;
+		}
 	}
 </style>

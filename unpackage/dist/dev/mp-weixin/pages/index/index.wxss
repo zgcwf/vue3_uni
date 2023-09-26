@@ -1,23 +1,94 @@
-
+/**
+ * 1. 定义自定义的全局样式变量
+ */
+/**
+ * 2. 定义/重写uni-app内置的常用样式变量
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+/**
+ * 3. 定义/重写uni-ui内置的常用样式变量
+ */
 .content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50rpx;
+  height: 200rpx;
+  width: 200rpx;
+  margin-top: 200rpx;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50rpx;
 }
 .text-area {
-		display: flex;
-		justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 .title {
-		font-size: 36rpx;
-		color: #8f8f94;
+  font-size: 36rpx;
+  color: #8f8f94;
+}
+.scroll-Y {
+  height: 300px;
+}
+.scroll-Y .uni-scroll-view::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.scroll-Y .scroll-Y-1 {
+  height: 200px;
+  background-color: red;
+}
+.scroll-Y .scroll-Y-2 {
+  height: 200px;
+  background-color: blue;
+}
+.scroll-Y .scroll-Y-3 {
+  height: 200px;
+  background-color: green;
+}
+.scroll-X {
+  height: 300px;
+  width: 750rpx;
+  white-space: nowrap;
+}
+.scroll-X ::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.scroll-X .scroll-X-1 {
+  display: inline-block;
+  width: 600rpx;
+  height: 200px;
+  background-color: red;
+}
+.scroll-X .scroll-X-2 {
+  display: inline-block;
+  width: 600rpx;
+  height: 200px;
+  background-color: blue;
+}
+.scroll-X .scroll-X-3 {
+  display: inline-block;
+  width: 600rpx;
+  height: 200px;
+  background-color: green;
 }
