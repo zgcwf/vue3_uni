@@ -1,9 +1,9 @@
 <template>
 	<view class="content">
-		<image class="logo" src="@/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
-		</view>
+		<image class="logo" src="@/static/img/logo.png"></image>
+
+		<button type="primary" plain="true" @click="gotoUser">跳转user</button>
+
 		<scroll-view scroll-y="true" class="scroll-Y" :show-scrollbar="false">
 			<view class="scroll-Y-1">A</view>
 			<view class="scroll-Y-2">B</view>
@@ -24,6 +24,7 @@
 				title: 'Hello, World'
 			}
 		},
+
 		// 页面的生命周期
 		onLoad() {
 			console.log('onLoad', this) // this是当前Vue实例
@@ -38,13 +39,51 @@
 			// 用于获取当前页面栈的实例，以数组形式按栈的顺序给出，数组中的元素为页面实例，第一个元素为首页，最后一个元素为当前页面
 			const pages = getCurrentPages()
 			console.log(pages[pages.length - 1].route)
+
+			// 3. 监听事件总线
+			uni.$on('updateData', this.emitLog)
+		},
+
+		onUnload() {
+			// 移除监听的事件总线
+			uni.$off('updateData', this.emitLog)
 		},
 
 		// Vue组件的声明周期
 		beforeCreate() {},
 		created() {},
-		methods: {
 
+		// 声明方法
+		methods: {
+			emitLog(data) {
+				console.log('监听到事件是来自 user 页面的 updateData 事件 ，携带参数 msg 为：' + data.msg);
+			},
+			gotoUser() {
+				uni.navigateTo({
+					url: '/pages/user/user?id=1&name=zgc',
+					events: {
+						// 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
+						acceptDataFromOpenedPage: function(data) {
+							console.log(data)
+						},
+						someEvent: function(data) {
+							console.log(data)
+						},
+						acceptUserPageData(data) {
+							console.log(data);
+						}
+					},
+					success: function(res) {
+						// 通过eventChannel向被打开页面传送数据
+						res.eventChannel.emit('acceptDataFromOpenerPage', {
+							obj: {
+								id: '001'
+							},
+							str: '我是从index页面传递过来的数据'
+						})
+					}
+				});
+			}
 		}
 	}
 </script>
@@ -66,18 +105,9 @@
 		margin-bottom: 50rpx;
 	}
 
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
-	}
-
 	.scroll-Y {
 		height: 300px;
+
 		// 隐藏滚动条(编写全局样式)
 		:global(.scroll-Y .uni-scroll-view::-webkit-scrollbar) {
 			display: none;
@@ -106,6 +136,7 @@
 		height: 300px;
 		width: 750rpx;
 		white-space: nowrap;
+
 		// 隐藏滚动条
 		::-webkit-scrollbar {
 			display: none;

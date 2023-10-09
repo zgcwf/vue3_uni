@@ -24,5 +24,5 @@
 <!-- 不需要写 scoped 属性，app文件内是公共样式，每个页面/组件内带是自己的私有样式 -->
 <style lang="scss">
 	/*每个页面公共css */
-	 @import '@/static/css/common.scss';
+	 @import '@/common/css/common.scss';
 </style>

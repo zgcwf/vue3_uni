@@ -5,6 +5,24 @@
 			"style": {
 				"navigationBarTitleText": "my-app"
 			}
+		},
+		{
+			"path": "pages/user/user",
+			"style": {
+				"navigationBarTitleText": "user"
+			}
+		},
+		{
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "home",
+			}
+		},
+		{
+			"path": "pages/test/test",
+			"style": {
+				"navigationBarTitleText": "test",
+			}
 		}
 	],
 	"globalStyle": {
