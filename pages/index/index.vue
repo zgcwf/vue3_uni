@@ -3,6 +3,7 @@
 		<image class="logo" src="@/static/img/logo.png"></image>
 
 		<button type="primary" plain="true" @click="gotoUser">跳转user</button>
+	
 
 		<scroll-view scroll-y="true" class="scroll-Y" :show-scrollbar="false">
 			<view class="scroll-Y-1">A</view>
@@ -49,10 +50,6 @@
 			uni.$off('updateData', this.emitLog)
 		},
 
-		// Vue组件的声明周期
-		beforeCreate() {},
-		created() {},
-
 		// 声明方法
 		methods: {
 			emitLog(data) {
@@ -83,7 +80,7 @@
 						})
 					}
 				});
-			}
+			},
 		}
 	}
 </script>

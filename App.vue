@@ -1,6 +1,6 @@
 <script>
 	export default {
-		// 只能在App.vue里监听应用的生命周期
+		// 只能在App.vue里监听 -- 应用的生命周期
 		// https://zh.uniapp.dcloud.io/collocation/App.html
 		onLaunch: function() {
 			console.log('App Launch')
