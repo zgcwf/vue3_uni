@@ -3,7 +3,7 @@
 		<image class="logo" src="@/static/img/logo.png"></image>
 
 		<button type="primary" plain="true" @click="gotoUser">跳转user</button>
-	
+
 
 		<scroll-view scroll-y="true" class="scroll-Y" :show-scrollbar="false">
 			<view class="scroll-Y-1">A</view>
@@ -42,11 +42,13 @@
 			console.log(pages[pages.length - 1].route)
 
 			// 3. 监听事件总线
+			// vue3: uni.$on('updateData', emitLog)
 			uni.$on('updateData', this.emitLog)
 		},
 
 		onUnload() {
 			// 移除监听的事件总线
+			// vue3: uni.$off('updateData', emitLog)
 			uni.$off('updateData', this.emitLog)
 		},
 
@@ -60,13 +62,10 @@
 					url: '/pages/user/user?id=1&name=zgc',
 					events: {
 						// 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
-						acceptDataFromOpenedPage: function(data) {
+						acceptUserPageData1: function(data) {
 							console.log(data)
 						},
-						someEvent: function(data) {
-							console.log(data)
-						},
-						acceptUserPageData(data) {
+						acceptUserPageData2(data) {
 							console.log(data);
 						}
 					},

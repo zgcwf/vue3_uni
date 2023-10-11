@@ -24,6 +24,20 @@
 				"navigationBarTitleText": "test",
 				"enablePullDownRefresh": true
 			}
+		},
+		{
+			"path": "pages/list/list",
+			"style": {
+				"navigationBarTitleText": "list",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/detail/detail",
+			"style": {
+				"navigationBarTitleText": "detail",
+				"enablePullDownRefresh": false
+			}
 		}
 	],
 	"globalStyle": {
