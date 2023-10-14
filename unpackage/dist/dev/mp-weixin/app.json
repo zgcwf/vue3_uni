@@ -1,6 +1,12 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/home/home",
+    "pages/index/index",
+    "pages/user/user",
+    "pages/test/test",
+    "pages/list/list",
+    "pages/detail/detail",
+    "pages/webview/webview"
   ],
   "window": {
     "navigationBarTextStyle": "black",

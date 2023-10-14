@@ -1,4 +1,6 @@
 import App from './App'
+// HBuilder X创建的项目默认集成了 Pinia，不需要手动安装
+import * as Pinia from 'pinia'
 
 // #ifndef VUE3
 import Vue from 'vue'
@@ -15,8 +17,10 @@ app.$mount()
 import { createSSRApp } from 'vue'
 export function createApp() {
   const app = createSSRApp(App)
+	app.use(Pinia.createPinia())
   return {
-    app
+    app,
+		Pinia
   }
 }
 // #endif

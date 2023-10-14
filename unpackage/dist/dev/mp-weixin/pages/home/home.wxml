@@ -1,0 +1,1 @@
+<view><button type="primary" plain="true" bindtap="{{a}}">跳转test</button><button type="primary" plain="true" bindtap="{{b}}">跳转index</button><button type="primary" plain="true" bindtap="{{c}}">跳转list</button></view>

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "list",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "my-button": "../../components/my-button/my-button",
+    "my-button-setup": "../../components/my-button-setup/my-button-setup",
+    "list-banner": "./components/list-banner"
+  }
+}

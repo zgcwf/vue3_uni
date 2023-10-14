@@ -2,7 +2,15 @@
  * 1. 定义自定义的全局样式变量
  */
 /**
- * 2. 定义/重写uni-app内置的常用样式变量
+ * 2. 定义/重写uni-ui内置的常用样式变量
+ */
+/* 水平间距 */
+/* 水平间距 */
+/*
+ 以下变量是默认值，如不需要修改可以不用给下面的变量重新赋值
+ */
+/**
+ * 3. 定义/重写uni-app内置的常用样式变量
  */
 /* 颜色变量 */
 /* 行为相关颜色 */
@@ -17,9 +25,6 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-/**
- * 3. 定义/重写uni-ui内置的常用样式变量
- */
 .content {
   display: flex;
   flex-direction: column;
@@ -33,14 +38,6 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50rpx;
-}
-.text-area {
-  display: flex;
-  justify-content: center;
-}
-.title {
-  font-size: 36rpx;
-  color: #8f8f94;
 }
 .scroll-Y {
   height: 300px;
