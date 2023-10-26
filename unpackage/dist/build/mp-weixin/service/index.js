@@ -1,0 +1,1 @@
+"use strict";const e=require("../common/vendor.js"),t={service:(t,s,r)=>new Promise(((i,o)=>{e.index.request({url:"http://123.207.32.32:8000"+t,method:s||"GET",timeout:12e4,data:r,success:e=>{i(e.data.data)},fail:e=>{o(e)}})})),get:(e,s)=>t.service(e,"GET",s),post:(e,s)=>t.service(e,"POST",s)};exports.request=t;

@@ -1,0 +1,45 @@
+/**
+ * 1. 定义自定义的全局样式变量
+ */
+/* 省略 */
+.text-nowrap {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* flex */
+/**
+ * 2. 定义/重写uni-ui内置的常用样式变量
+ */
+/* 水平间距 */
+/* 水平间距 */
+/*
+ 以下变量是默认值，如不需要修改可以不用给下面的变量重新赋值
+ */
+/**
+ * 3. 定义/重写uni-app内置的常用样式变量
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.test-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.test-flex view {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+}

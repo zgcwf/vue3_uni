@@ -1,0 +1,1 @@
+.text-nowrap{white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.test-flex{display:flex;flex-direction:row;justify-content:space-between}.test-flex view{width:100px;height:100px;background-color:#ccc}

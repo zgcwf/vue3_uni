@@ -1,10 +1,12 @@
-// 在uni.css中定义的变量，无需@import就可以在任意组件中使用
-
 /**
  * 1. 定义自定义的全局样式变量
  */
 @import '@/common/css/base.scss';
 $my-color: #ccc;
+
+// 在uni.css中定义的变量，无需@import就可以在任意组件中使用
+// 导入到uni.css中定义的变量，也无需@import就可以在任意组件中使用
+@import '@/common/css/common.scss';
 
 /**
  * 2. 定义/重写uni-ui内置的常用样式变量

@@ -1,6 +1,14 @@
 /**
  * 1. 定义自定义的全局样式变量
  */
+/* 省略 */
+.text-nowrap {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* flex */
 /**
  * 2. 定义/重写uni-ui内置的常用样式变量
  */

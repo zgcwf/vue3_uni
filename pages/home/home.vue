@@ -3,6 +3,12 @@
 		<button type="primary" plain="true" @click="gotoTest">跳转test</button>
 		<button type="primary" plain="true" @click="gotoIndex">跳转index</button>
 		<button type="primary" plain="true" @click="gotoList">跳转list</button>
+
+		<view class="test-flex">
+			<view>1</view>
+			<view>2</view>
+			<view>3</view>
+		</view>
 	</view>
 </template>
 
@@ -66,6 +72,14 @@
 	}
 </script>
 
-<style>
-
+<style lang="scss">
+	.test-flex {
+		// normalFlex接受两个参数，不传递参数时可以省略()
+		@include normalFlex();
+		view {
+			width: 100px;
+			height: 100px;
+			background-color: $my-color;
+		}
+	}
 </style>
